@@ -1,0 +1,28 @@
+{
+  "name": "vuepress-theme-jian",
+  "version": "0.1.0",
+  "description": "Just a vuepress theme.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqrthree/vuepress-theme-jian.git"
+  },
+  "keywords": [],
+  "author": "sqrtthree <imsqrtthree@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sqrthree/vuepress-theme-jian/issues"
+  },
+  "homepage": "https://github.com/sqrthree/vuepress-theme-jian#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
+    "vuepress": "^1.0.4"
+  }
+}

@@ -1,0 +1,178 @@
+@import '_variables';
+
+.markdown-body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    padding-left: 1.625rem;
+    margin-left: -1.625rem;
+
+    .header-anchor {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      opacity: 0;
+      font-weight: 400;
+      font-size: 1.25rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      .header-anchor {
+        opacity: 1;
+        transform: translateX(-1.625rem);
+      }
+    }
+  }
+
+  & > .content__default {
+    & > h1,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6 {
+      margin-top: 1rem;
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $primary;
+  }
+
+  a {
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    line-height: 26px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  div,
+  p {
+    hyphens: auto;
+    // word-break: break-all;
+
+    & > code {
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+    }
+  }
+
+  pre {
+    padding: 1.5rem;
+    font-size: 0;
+    overflow: auto;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+
+    * {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    }
+  }
+
+  details {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+
+    summary {
+      position: relative;
+      font-size: 20px;
+      font-weight: 500;
+      outline: none;
+      user-select: none;
+      cursor: pointer;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::before {
+        position: absolute;
+        margin-left: -1.5rem;
+        margin-top: 2px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        content: "";
+        background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTY4NDgwNDg2ODQ2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjIwMDMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNDI1LjU2ODM1OTM3NSA4NjQuMjY1NjI1QTU1LjI4NzA0ODMzOTg0Mzc2IDU1LjI4NzA0ODMzOTg0Mzc2IDAgMCAxIDM4Ni4wNzAzMTI1IDg4MS4xNDA2MjVjLTMzLjYxODE2NDA2MjUtMS4zOTc0NjA5Mzc0OTk5OTk4LTU5LjgwMDc4MTI0OTk5OTk5LTI5LjY2MzA4NTkzNzUtNTguNjE0MjU3ODEyNDk5OTktNjMuMjgxMjVhNjUuMjcyNzk2NjMwODU5MzYgNjUuMjcyNzk2NjMwODU5MzYgMCAwIDEgMTkuMDg5ODQzNzQ5OTk5OTk2LTQ2LjQwNjI1TDYwNC4yMDYwNTQ2ODc1IDUxMiAzNDYuNTQ1ODk4NDM3NSAyNTIuNTQ2ODc1YTY1LjI3Mjc5NjYzMDg1OTM2IDY1LjI3Mjc5NjYzMDg1OTM2IDAgMCAxLTE5LjA4OTg0Mzc0OTk5OTk5Ni00Ni40MDYyNWMtMS4xODY1MjM0Mzc0OTk5OTk4LTMzLjYxODE2NDA2MjUgMjQuOTk2MDkzNzQ5OTk5OTk2LTYxLjg4Mzc4OTA2MjQ5OTk5IDU4LjYxNDI1NzgxMjQ5OTk5LTYzLjI4MTI1YTU1LjI4NzA0ODMzOTg0Mzc2IDU1LjI4NzA0ODMzOTg0Mzc2IDAgMCAxIDM5LjQ5ODA0Njg3NDk5OTk5IDE2Ljg3NWwzMDQuNzUxOTUzMTI1IDMwNS44NTkzNzVjMjUuMzEyNDk5OTk5OTk5OTk2IDI1Ljc2MDc0MjE4NzUgMjUuMzEyNDk5OTk5OTk5OTk2IDY3LjA1MTc1NzgxMjUwMDAxIDAgOTIuODEyNWwtMzA0Ljc1MTk1MzEyNSAzMDUuODU5Mzc1eiIgZmlsbD0iIzFhMWExYSIgcC1pZD0iMjAwNCI+PC9wYXRoPjwvc3ZnPg==") 0 0 / 100% 100% no-repeat;
+        transition: transform .3s ease-in-out;
+      }
+    }
+
+    &[open] {
+      summary {
+        &::before {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: $secondary;
+    }
+  }
+
+  .alert {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-left: 0.375rem solid $primary;
+    background-color: #f5f5f5;
+
+    &--info {
+      border-left-color: $info;
+    }
+
+    &--tip,
+    &--tips {
+      border-left-color: $primary;
+    }
+
+    &--success {
+      border-left-color: $success;
+    }
+
+    &--warn,
+    &--warning {
+      border-left-color: $warning;
+    }
+
+    &--danger,
+    &--error {
+      border-left-color: $danger;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+  }
+}
