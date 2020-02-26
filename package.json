@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/sqrthree/vuepress-theme-jian#readme",
   "dependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
-    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
     "vuepress": "^1.0.4"
   }
 }
