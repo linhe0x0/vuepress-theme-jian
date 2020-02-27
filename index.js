@@ -4,6 +4,7 @@ module.exports = {
   plugins: [
     '@vuepress/last-updated',
     '@vuepress/nprogress',
+    '@vuepress/active-header-links',
     [
       '@vuepress/medium-zoom',
       {

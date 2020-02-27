@@ -6,22 +6,28 @@
         v-for="item in navList"
         :key="item.key"
         :class="{
-          'navbar__item--active': activeItemList.includes(item.key)
+          'navbar__item--active': activeItemList.includes(item.key),
         }"
       >
         <router-link
           class="navbar__name"
           :class="{
-            'navbar__name--active': activeItemList.includes(item.key)
+            'navbar__name--active': activeItemList.includes(item.key),
           }"
           :to="item.to"
-        >{{ item.name }}</router-link>
+          >{{ item.name }}</router-link
+        >
         <ul class="navbar__sub-group" v-if="item.headers.length">
-          <li class="navbar__sub-item" v-for="header in item.headers" :key="header.slug">
+          <li
+            class="navbar__sub-item"
+            v-for="header in item.headers"
+            :key="header.slug"
+          >
             <router-link
-              class="navbar__name navbar__name--compact"
+              class="navbar__name navbar__name--compact sidebar-link"
               :to="`${item.to}#${header.slug}`"
-            >{{ header.title }}</router-link>
+              >{{ header.title }}</router-link
+            >
           </li>
         </ul>
       </li>
@@ -100,7 +106,8 @@ export default {
       line-height: 1.25rem;
     }
 
-    &--active {
+    &--active,
+    &.router-link-active {
       font-weight: 700;
       color: $primary;
     }
